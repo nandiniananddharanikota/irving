@@ -1,0 +1,36 @@
+<div class="col-md-6">
+  <h2>Add Appointment</h2>
+</div>
+<form [formGroup]="addAppointmentForm">
+  
+
+<label>
+    First Name:
+<input type="text" [(ngModel)]="appointment.firstName" formControlName="firstName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" [(ngModel)]="appointment.lastName"  formControlName="lastName">
+  </label>
+  <label>
+      ApptDate:
+      <input type="text" [(ngModel)]="appointment.apptDate" formControlName="apptDate">
+    </label>
+    <label>
+        ApptTime:
+        <input type="text" [(ngModel)]="appointment.apptTime" formControlName="apptTime">
+      </label>
+      <label>
+          Dob:
+          <input type="text" [(ngModel)]="appointment.dob" formControlName="dob">
+        </label>
+      <!--  <label>
+            ConfCode:
+            <input type="text" formControlName="confCode">
+          </label>-->
+          <button class="btn btn-success" (click)="addAppointment()">Add Appointment</button>
+         
+</form>
+
+

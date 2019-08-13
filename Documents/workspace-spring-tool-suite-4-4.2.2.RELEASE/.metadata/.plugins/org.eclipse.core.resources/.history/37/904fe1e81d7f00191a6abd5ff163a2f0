@@ -1,0 +1,43 @@
+package com.sample.appt.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sample.appt.model.Appointment;
+
+@RestController
+public class MainController {
+	private static List<Appointment> listOfAppointment = createAppointmentList();
+	
+	public  class getAppointments(){
+		
+	}
+	
+	private static List<Appointment> createAppointmentList(){
+		List<Appointment> tempAppt = new ArrayList<>();
+		Appointment app1 = new Appointment();
+		app1.setFirstName("John");
+		app1.setLastName("John");
+		app1.setApptDate("06/05/2019");
+		app1.setApptTime("9:30AM");
+		app1.setDob("01/01/1990");
+		app1.setConfCode("001");
+		
+		Appointment app2 = new Appointment();
+		app2.setFirstName("Mike");
+		app2.setLastName("TEst");
+		app2.setApptDate("06/05/2019");
+		app2.setApptTime("10:30AM");
+		app2.setDob("01/02/1990");
+		app2.setConfCode("002");
+		
+		tempAppt.add(app1);
+		tempAppt.add(app2);
+				
+		return tempAppt;
+		
+	}
+
+}

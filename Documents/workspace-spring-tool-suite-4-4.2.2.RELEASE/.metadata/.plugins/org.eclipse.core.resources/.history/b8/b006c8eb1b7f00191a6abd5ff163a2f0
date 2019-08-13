@@ -1,0 +1,5 @@
+package com.sample.appt.model;
+
+public class Appointment {
+
+}

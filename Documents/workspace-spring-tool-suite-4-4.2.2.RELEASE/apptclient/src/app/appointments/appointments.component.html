@@ -1,0 +1,29 @@
+
+<!--li *ngFor="let appt of appointments">{{appt.firstName}}</li>-->
+<div class="col-md-6">
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>DOB </th>
+    <th>APPT Date</th>
+    <th>Time</th>
+
+  </tr>
+</thead>
+  <tbody>
+    <tr class="tdclass" *ngFor="let appt of appointments">
+      <td >{{appt.firstName}}</td>
+      <td>{{appt.lastName}}</td>
+      <td>{{appt.dob}}</td>
+      <td>{{appt.apptDate}}</td>
+      <td>{{appt.apptTime}}</td>
+      <td><button class="btn btn-danger" (click)="deleteAppointment(appt)"> Delete</button></td>
+
+    </tr>
+  </tbody>
+  </table>
+  <a routerLink="/createappt"><button class="btn btn-success pull-right" > Add Appointment</button></a>
+ 
+</div>
